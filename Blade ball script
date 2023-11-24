@@ -1,0 +1,201 @@
+local ArrayField = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/ArrayField/main/Source.lua'))()
+
+local Window = ArrayField:CreateWindow({
+   Name = "Blade ball script",
+   LoadingTitle = "Loading script",
+   LoadingSubtitle = "by eshaanopn",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Blade ball script"
+   },
+   Discord = {
+      Enabled = true,
+      Invite = "GfnzGxwZVv", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using ArrayField may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like ArrayField to get the key from
+      Actions = {
+            [1] = {
+                Text = 'Click here to copy the key link <--',
+                OnPress = function()
+                    print('Pressed')
+                end,
+                }
+            },
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+Window:Prompt({
+    Title = 'Blade ball script',
+    SubTitle = 'Subscribe',
+    Content = 'Sub to eshaanopn.',
+    Actions = {
+        Accept = {
+            Name = 'Accept',
+            Callback = function()
+                print('Pressed')
+            end,
+        }
+    }
+})
+
+local Tab = Window:CreateTab("The main tab.", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Hope you enjoy",false) -- The 2nd argument is to tell if its only a Title and doesnt contain element
+
+ArrayField:Notify({
+   Title = "Hey,",
+   Content = "Please Subscribe To Eshaanopn",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "Okay!",
+         Callback = function()
+         print("The user tapped Okay!")
+      end
+   },
+ },
+})
+
+local Button = Tab:CreateButton({
+   Name = "auto parry(THE BEST)",
+   Interact = 'Click',
+   Callback = function()
+getgenv().config = getgenv().config or {
+	hit_time = 0.5, -- // recommended 0.25 to 0.75 \\ --
+	
+	mode = 'Always', -- // Hold , Toggle , Always \\ --
+	deflect_type = 'Remote', -- // Key Press , Remote \\ --
+	notifications = true,
+	keybind = Enum.KeyCode.V
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Parry%20V4.0.0",true))()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Hold block to spam(Mobile) and also best to use with auto parry (V1) All of these are recommended to use with auto parry",
+   Interact = 'Click',
+   Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Script Activated",
+	Text = "Hold Block button to Spam",
+	Duration = 5
+})
+
+getgenv().SpamSpeed = 1 -- 1-25
+
+if not getgenv().exeSpam then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam",true))()
+end
+
+getgenv().exeSpam = true
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Hold block button to spam V2",
+   Interact = 'Click',
+   Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Script Activated",
+	Text = "Hold Block button to Spam",
+	Duration = 5
+})
+
+getgenv().SpamSpeed = 2 -- 1-25
+
+if not getgenv().exeSpam then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam",true))()
+end
+
+getgenv().exeSpam = true
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Hold block button to spam V3",
+   Interact = 'Click',
+   Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Script Activated",
+	Text = "Hold Block button to Spam",
+	Duration = 5
+})
+
+getgenv().SpamSpeed = 3 -- 1-25
+
+if not getgenv().exeSpam then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam",true))()
+end
+
+getgenv().exeSpam = true
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Hold block to spam (V4)",
+   Interact = 'Click',
+   Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Script Activated",
+	Text = "Hold Block button to Spam",
+	Duration = 5
+})
+
+getgenv().SpamSpeed = 4 -- 1-25
+
+if not getgenv().exeSpam then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam",true))()
+end
+
+getgenv().exeSpam = true
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Hold block to spam (V5)",
+   Interact = 'Click',
+   Callback = function()
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Script Activated",
+	Text = "Hold Block button to Spam",
+	Duration = 5
+})
+
+getgenv().SpamSpeed = 5 -- 1-25
+
+if not getgenv().exeSpam then
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Hosvile/Refinement/main/MC%3ABlade%20Ball%20Spam",true))()
+end
+
+getgenv().exeSpam = true
+   -- The function that takes place when the button is pressed
+   end,
+})
+
+local Tab = Window:CreateTab("Credits", 4483362458) -- Title, Image
+
+local Button = Tab:CreateButton({
+   Name = "eshaanopn for the hub and hosvile for the script.",
+   Interact = 'Click',
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
